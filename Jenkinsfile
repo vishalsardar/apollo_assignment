@@ -1,5 +1,10 @@
 pipeline {
     agent any
+
+    tools {
+        nodejs "NodeJS"                  // must match your NodeJS tool name in Jenkins
+        sonarQubeScanner "SonarScanner"  // must match the name you configured above
+    }
     
     stages {
         stage('Checkout') {
